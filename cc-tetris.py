@@ -20,9 +20,11 @@ def draw_start_menu():
    font = pygame.font.SysFont('Red Hat Mono', 40)
    font_hint = pygame.font.SysFont('Red Hat Mono', 11)
    title = font.render('Coding Challenge Tetris', True, (255, 255, 255))
-   hint = font_hint.render('Press Space to Start', True, (255, 255, 255))
+   hint = font_hint.render('Press <space> to Start', True, (255, 255, 255))
+   help = font_hint.render('Press <h> for Help', True, (255, 255, 255))
    screen.blit(title, (screen_width/2 - title.get_width()/2, screen_height/2 - title.get_height()/2))
    screen.blit(hint, (screen_width/2 - hint.get_width()/2, screen_height/10 + hint.get_height()/2 + 300))
+   screen.blit(help, (screen_width/2 - help.get_width()/2, screen_height/10 + help.get_height()/2 + 330))
    pygame.display.update()
 
 def draw_game_over_screen():
@@ -30,8 +32,8 @@ def draw_game_over_screen():
    font = pygame.font.SysFont('Red Hat Mono', 40)
    font_hint = pygame.font.SysFont('Red Hat Mono', 11)
    title = font.render('Game Over', True, (255, 255, 255))
-   restart_button = font_hint.render('R - Restart', True, (255, 255, 255))
-   quit_button = font_hint.render('Q - Quit', True, (255, 255, 255))
+   restart_button = font_hint.render('Press <r> to Restart', True, (255, 255, 255))
+   quit_button = font_hint.render('Press <q> to Quit', True, (255, 255, 255))
    screen.blit(title, (screen_width/2 - title.get_width()/2, screen_height/2 - title.get_height()/3))
    screen.blit(restart_button, (screen_width/2 - restart_button.get_width()/2, screen_height/8 + restart_button.get_height() + 300))
    screen.blit(quit_button, (screen_width/2 - quit_button.get_width()/2, screen_height/9 + quit_button.get_height()/2 + 330))
